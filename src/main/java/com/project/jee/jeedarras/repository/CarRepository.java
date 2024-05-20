@@ -1,18 +1,11 @@
-package com.project.jee.darrasjee.repository;
+package com.project.jee.jeedarras.repository;
 
-import com.project.jee.darrasjee.domain.Car;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import com.project.jee.jeedarras.entity.Car;
+
+@Repository
 
 public interface CarRepository extends JpaRepository<Car, Long> {
-
-        @Query("Select c From Car c")
-        List<Car> findCars(Pageable page);
-
-        @Query("Select c From Car c Where c.isAvailable = true")
-        List<Car> findAvailableCars(Pageable page);
-
 }

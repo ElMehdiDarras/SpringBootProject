@@ -1,14 +1,14 @@
 package com.project.jee.jeedarras.dto;
+
 import com.project.jee.jeedarras.enums.UserRole;
 
 import lombok.Data;
 
-
 @Data
-public class UserDto {
 
-    private Long id;
-    private String name;
-    private String email;
+public class AuthenticationResponse {
+
+    private String jwt;
     private UserRole userRole;
+    private Long userId;
 }

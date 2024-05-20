@@ -1,18 +1,24 @@
-package com.project.jee.darrasjee.dto;
+package com.project.jee.jeedarras.dto;
 
-import com.project.jee.darrasjee.domain.CarParameters;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
+
 import lombok.Data;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.Date;
 
 @Data
-@AllArgsConstructor
-@Builder
 public class CarDto {
 
-        private String registrationNr;
-        private String brand;
-        private String model;
-        private Boolean isAvailable;
-
+    private Long id;
+    private String brand;
+    private String color;
+    private String name;
+    private String type;
+    private String transmission;
+    private String description;
+    private Long price;
+    private Date year;
+    private MultipartFile image;
+    private byte[] returnedImage;
 }
+
